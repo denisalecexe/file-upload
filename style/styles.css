@@ -1,5 +1,5 @@
 * {
-  cursor: url('/black-cursor/black-cursor.cur'), auto;
+  cursor: url('/cursor/black-cursor.cur'), auto;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -71,6 +71,83 @@ body {
   flex-direction: column;
   border: 2px dashed var(--dropzone-border);
   border-radius: 1rem;
-  cursor: url('/black-cursor/blue-cursor.cur'), auto;
+  cursor: url('/cursor/blue-cursor.cur'), auto;
   transition: all 0.3s ease;
+}
+
+.dropzone-description {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-info {
+  font-size: 1.1rem;
+}
+
+.dropzone-area [type="file"] {
+  cursor: url('/cursor/blue-cursor.cur'), auto;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.file-upload-icon svg {
+  height: 6rem;
+  max-width: 6rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  stroke: var(--headline);
+}
+
+.dropzone-area:hover {
+  background: var(--dropzone-over);
+}
+
+.dropzone-over {
+  border: 2px solid var(--primary);
+  background: var(--dropzone-over);
+}
+
+.dropzone-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  flex-grow: 1;
+  min-height: 3rem;
+  font-size: 1.2rem;
+  border: none;
+  transition: background 0.3 ease;
+}
+
+.cancel-button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1 rem;
+  color: var(--text);
+  background: var(--secondary);
+  cursor: url('/cursor/blue-cursor.cur'), auto;
+  border: 1px solid var(--dropzone-border);
+  transition: all 0.3 ease;
+}
+
+.cancel-button:hover {
+  border: 1px solid var(--primary);
+}
+
+.submit-button {
+  background: var(--primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--primary-text);
+  border: none;
+  cursor: url('/cursor/blue-cursor.cur'), auto;
 }
